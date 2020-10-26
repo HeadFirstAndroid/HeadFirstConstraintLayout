@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:id="@+id/container"
+        >
+
+        <Button
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Relative Positioning"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@id/margins"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            />
+
+        <Button
+            android:id="@+id/margins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Margins"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/centering"
+            app:layout_constraintTop_toBottomOf="@+id/relative"
+            />
+
+        <Button
+            android:id="@+id/centering"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Centering positioning"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/circular"
+            app:layout_constraintTop_toBottomOf="@+id/margins"
+            />
+
+        <Button
+            android:id="@+id/circular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Circular positioning"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/visibility"
+            app:layout_constraintTop_toBottomOf="@+id/centering"
+            />
+
+        <Button
+            android:id="@+id/visibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Visibility behavior"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/dimension"
+            app:layout_constraintTop_toBottomOf="@+id/circular"
+            />
+
+        <Button
+            android:id="@+id/dimension"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dimension constraints"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/chains"
+            app:layout_constraintTop_toBottomOf="@+id/visibility"
+            />
+
+        <Button
+            android:id="@+id/chains"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chains"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/virtual"
+            app:layout_constraintTop_toBottomOf="@+id/dimension"
+            />
+
+        <Button
+            android:id="@+id/virtual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Virtual Helpers objects"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/optimizer"
+            app:layout_constraintTop_toBottomOf="@+id/chains"
+            />
+
+        <Button
+            android:id="@+id/optimizer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Optimizer"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/virtual"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
